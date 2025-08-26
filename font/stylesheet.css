@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Helvetica World';
+    src: url('HelveticaWorld-BoldItalic.woff2') format('woff2'),
+        url('HelveticaWorld-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica World';
+    src: url('HelveticaWorld-Bold.woff2') format('woff2'),
+        url('HelveticaWorld-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica World';
+    src: url('HelveticaWorld-Italic.woff2') format('woff2'),
+        url('HelveticaWorld-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica World';
+    src: url('HelveticaWorld-Regular.woff2') format('woff2'),
+        url('HelveticaWorld-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
