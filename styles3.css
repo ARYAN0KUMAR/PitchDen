@@ -1156,7 +1156,7 @@ background: linear-gradient(90deg, #5de0e6, #004aad, #004aad);
   content: "";
   position: absolute;
   inset: 0;
-  background: url('imgs/investor_bg.png') no-repeat center/cover;
+  background: url('imgs/Investor_bg.png') no-repeat center/cover;
   opacity: 0.5; /* Your Canva transparency */
   z-index: 0;
 }

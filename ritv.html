@@ -246,17 +246,19 @@ Get early access to high-potential startups, watch them build in real-time, and 
       <div class="footer-top">
         <div class="footer-logo">
           <img src="imgs/white_Ritv.png" alt="Pitch Den Logo" />
-          <a @click.prevent="openMail" href="#" class="contact-btn none">
+<a href="mailto:chirag@alphaseednetwork.com" class="contact-btn none">
   Contact Us
 </a>
+
         </div>
       </div>
 
       <div class="footer-bottom">
         <!-- ✅ Mailto Contact Us button -->
-<a @click.prevent="openMail" href="#" class="contact-btn yes">
+<a href="mailto:chirag@alphaseednetwork.com" class="contact-btn yes">
   Contact Us
 </a>
+
 
 
         <div class="footer-bottom2">
@@ -281,6 +283,9 @@ Get early access to high-potential startups, watch them build in real-time, and 
 
   <script>
     // Grab elements
+    const openMail = () => {
+  window.open("mailto:chirag@alphaseednetwork.com", "_blank");
+};
     const menuBtn = document.querySelector(".menu-btn");
     const menu = document.querySelector(".menu");
 
