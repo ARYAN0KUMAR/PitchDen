@@ -668,7 +668,7 @@ html {
         .carousel-wrapper {
           display: flex;
           height: 100%;
-         
+         cursor: grab;
         }
 
         
