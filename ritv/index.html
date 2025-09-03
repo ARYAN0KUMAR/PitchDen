@@ -43,7 +43,7 @@ in a Villa near Mumbai</p>
 
                 <h4>Funding Opportunity up to 15 Lacs</h4>
             </div>
-            <div class="image-div">
+            <div class="image-div ">
               <img src="../imgs/pitch_main.png" alt="Logo" />
             </div>
 
@@ -99,10 +99,124 @@ creation and funding experience, hosted inside a villa. </p>
     <li>Funding deals up to ₹15 lacs possible on the spot</li>
   </ul>
   </div>
-  <div class="carousel">
-   <img src="../imgs/hands.png" alt="Logo" /> 
-    </div>  
+<div class="carousel-container">
+  <div class="carousel-wrapper">
 
+    <div class="carousel-slide">
+
+      <img src="../imgs/carousel1.PNG" alt="Image 1">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel2.PNG" alt="Image 2">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel3.PNG" alt="Image 3">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel4.PNG" alt="Image 4">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel5.PNG" alt="Image 5">
+    </div>
+        <div class="carousel-slide">
+      <img src="../imgs/carousel7.PNG" alt="Image 6">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel6.PNG" alt="Image 6">
+    </div>
+       <div class="carousel-slide">
+
+      <img src="../imgs/carousel1.PNG" alt="Image 1">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel2.PNG" alt="Image 2">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel3.PNG" alt="Image 3">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel4.PNG" alt="Image 4">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel5.PNG" alt="Image 5">
+    </div>
+        <div class="carousel-slide">
+      <img src="../imgs/carousel7.PNG" alt="Image 6">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel6.PNG" alt="Image 6">
+    </div>
+    <div class="carousel-slide">
+
+      <img src="../imgs/carousel1.PNG" alt="Image 1">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel2.PNG" alt="Image 2">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel3.PNG" alt="Image 3">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel4.PNG" alt="Image 4">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel5.PNG" alt="Image 5">
+    </div>
+        <div class="carousel-slide">
+      <img src="../imgs/carousel7.PNG" alt="Image 6">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel6.PNG" alt="Image 6">
+    </div>
+    <div class="carousel-slide">
+
+      <img src="../imgs/carousel1.PNG" alt="Image 1">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel2.PNG" alt="Image 2">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel3.PNG" alt="Image 3">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel4.PNG" alt="Image 4">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel5.PNG" alt="Image 5">
+    </div>
+        <div class="carousel-slide">
+      <img src="../imgs/carousel7.PNG" alt="Image 6">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel6.PNG" alt="Image 6">
+    </div>
+    <div class="carousel-slide">
+
+      <img src="../imgs/carousel1.PNG" alt="Image 1">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel2.PNG" alt="Image 2">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel3.PNG" alt="Image 3">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel4.PNG" alt="Image 4">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel5.PNG" alt="Image 5">
+    </div>
+        <div class="carousel-slide">
+      <img src="../imgs/carousel7.PNG" alt="Image 6">
+    </div>
+    <div class="carousel-slide">
+      <img src="../imgs/carousel6.PNG" alt="Image 6">
+    </div>
+  </div>
+
+
+
+</div>
     </div>
 
   </div>
@@ -134,8 +248,9 @@ creation and funding experience, hosted inside a villa. </p>
     </div>
   </div>
 
-    </div>
-    </div>
+</div>
+</div>
+
 
        <div class="container">
         <section class="who-can-apply" id="apply">
@@ -154,8 +269,9 @@ creation and funding experience, hosted inside a villa. </p>
 </a>
         </div>
 
-      </div>
 
+
+  </div>
       <!-- Card 2 -->
       <div class="apply-card ">
                  <div class="icon3">
@@ -168,6 +284,7 @@ creation and funding experience, hosted inside a villa. </p>
 </a>
         </div>
  
+
     </div>
 
       <!-- Card 3 -->
@@ -304,6 +421,230 @@ menuLinks.forEach(link => {
     menuBtn.classList.remove("fixed-btn");
   });
 });
+// Wait until the DOM is fully loaded before running the script
+// Wait until the DOM is fully loaded before running the script
+document.addEventListener('DOMContentLoaded', () => {
+
+  const carouselContainer = document.querySelector('.carousel-container');
+  const carouselWrapper = carouselContainer.querySelector('.carousel-wrapper');
+  const allSlides = carouselContainer.querySelectorAll('.carousel-slide');
+  const prevButton = carouselContainer.querySelector('.carousel-control.prev'); // Keep these in HTML for now, though we won't use them for scrolling
+  const nextButton = carouselContainer.querySelector('.carousel-control.next');
+
+  let currentIndex = 0;
+  let slideInterval = null;
+  const slideTransitionSpeed = 200;
+  const autoSlideDelay = 3000;
+
+  const actualSlides = Array.from(allSlides).slice(1, -1);
+  const numActualSlides = actualSlides.length;
+  const totalSlidesInWrapper = allSlides.length;
+
+  // --- Touch/Drag Variables ---
+  let isDragging = false;
+  let startX = 0;
+  let initialTranslate = 0;
+  let currentTranslate = 0;
+  let animationFrameId = null;
+
+  // --- Helper Functions ---
+
+  const updateCarouselTransform = () => {
+    const offset = -currentIndex * 100;
+    // When dragging, we apply transform directly without transition for smooth feedback
+    carouselWrapper.style.transform = `translateX(${offset}%)`;
+  };
+
+  const applyTransition = () => {
+    carouselWrapper.style.transition = `transform ${slideTransitionSpeed / 1000}s ease-in-out`;
+  };
+
+  const removeTransition = () => {
+    carouselWrapper.style.transition = 'none';
+  };
+
+  const goToSlideWithTransition = (index) => {
+    currentIndex = index;
+    updateCarouselTransform();
+    applyTransition();
+  };
+
+  const goToSlideNoTransition = (index) => {
+    currentIndex = index;
+    removeTransition();
+    updateCarouselTransform();
+  };
+
+  // --- Navigation Logic (for buttons, now less critical for manual scroll) ---
+  const goToNextSlide = () => {
+    if (currentIndex === numActualSlides - 1) {
+      goToSlideNoTransition(numActualSlides);
+      setTimeout(() => {
+        goToSlideWithTransition(0);
+      }, slideTransitionSpeed);
+    } else {
+      goToSlideWithTransition(currentIndex + 1);
+    }
+  };
+
+  const goToPrevSlide = () => {
+    if (currentIndex === 0) {
+      goToSlideNoTransition(0);
+      setTimeout(() => {
+        goToSlideWithTransition(numActualSlides - 1);
+      }, slideTransitionSpeed);
+    } else {
+      goToSlideWithTransition(currentIndex - 1);
+    }
+  };
+
+  // --- Auto Slide Logic ---
+  const startAutoSlide = () => {
+    if (slideInterval) clearInterval(slideInterval);
+
+    slideInterval = setInterval(() => {
+      if (currentIndex === numActualSlides - 1) {
+        goToSlideNoTransition(numActualSlides);
+        setTimeout(() => {
+          goToSlideWithTransition(0);
+        }, slideTransitionSpeed);
+      } else {
+        goToSlideWithTransition(currentIndex + 1);
+      }
+    }, autoSlideDelay);
+  };
+
+  const stopAutoSlide = () => {
+    clearInterval(slideInterval);
+    slideInterval = null;
+  };
+
+  // --- Touch/Drag Event Handlers ---
+
+  // Function to start dragging
+  const dragStart = (event) => {
+    // Prevent default behavior for touch events and mouse events
+    if (event.type === 'touchstart') {
+      startX = event.touches[0].clientX;
+    } else { // mousedown
+      isDragging = true;
+      startX = event.clientX;
+      carouselWrapper.style.cursor = 'grabbing'; // Visual feedback
+      document.body.style.userSelect = 'none'; // Prevent text selection during drag
+    }
+    // Store the current wrapper translation before dragging begins
+    initialTranslate = carouselWrapper.getBoundingClientRect().left - carouselContainer.getBoundingClientRect().left;
+    removeTransition(); // Remove transition for immediate feedback during drag
+    stopAutoSlide(); // Stop auto-slide when user starts dragging
+  };
+
+  // Function to handle dragging
+  const dragging = (event) => {
+    if (!isDragging && event.type !== 'touchmove') return; // Only proceed if dragging or touchmove
+
+    const currentX = event.type === 'touchmove' ? event.touches[0].clientX : event.clientX;
+    const deltaX = currentX - startX; // How much the user has moved their finger/mouse
+    currentTranslate = initialTranslate + deltaX; // The new translation value
+
+    // Clamp the translation so it doesn't go too far past the first/last cloned slides
+    // Max translate is 0 (showing cloned last slide)
+    // Min translate is -(totalSlidesInWrapper - 1) * 100% (showing cloned first slide)
+    const minTranslate = -(totalSlidesInWrapper - 1) * 100;
+    const maxTranslate = 0;
+
+    // Apply the translation directly
+    carouselWrapper.style.transform = `translateX(${currentTranslate}%)`;
+  };
+
+  // Function to end dragging
+  const dragEnd = () => {
+    if (!isDragging) return;
+
+    isDragging = false;
+    carouselWrapper.style.cursor = 'grab'; // Restore cursor
+    document.body.style.userSelect = ''; // Restore text selection
+
+    const wrapperRect = carouselWrapper.getBoundingClientRect();
+    const containerRect = carouselContainer.getBoundingClientRect();
+
+    // Calculate how far the user dragged
+    // The total movement of the wrapper relative to the container's starting position
+    const dragDistance = wrapperRect.left - containerRect.left - initialTranslate;
+
+    // Define a threshold for a "swipe" (e.g., 10% of the carousel's width)
+    const swipeThreshold = containerRect.width * 0.2; // 20% of width
+
+    if (Math.abs(dragDistance) > swipeThreshold) {
+      // If dragged more than the threshold
+      if (dragDistance > 0) {
+        // Dragged to the right (previous slide)
+        if (currentIndex === 0) { // If on the cloned last slide
+          goToSlideNoTransition(0); // Stay on it (visually)
+          setTimeout(() => { goToSlideWithTransition(numActualSlides - 1); }, slideTransitionSpeed); // Animate to last actual
+        } else {
+          goToSlideWithTransition(currentIndex - 1); // Normal previous slide
+        }
+      } else {
+        // Dragged to the left (next slide)
+        if (currentIndex === numActualSlides - 1) { // If on the last actual slide
+          // Jump to the cloned first slide
+          goToSlideNoTransition(numActualSlides);
+          setTimeout(() => { goToSlideWithTransition(0); }, slideTransitionSpeed); // Animate to first actual
+        } else {
+          goToSlideWithTransition(currentIndex + 1); // Normal next slide
+        }
+      }
+    } else {
+      // If not dragged far enough, return to the original position
+      // Use the current slide's index to return to its correct transform
+      applyTransition(); // Re-apply transition
+      updateCarouselTransform(); // Reset to the correct slide's transform
+    }
+    startAutoSlide(); // Restart auto-slide after drag is complete
+  };
+
+
+  // --- Event Listeners ---
+  // For buttons (optional, if you want to keep them)
+  if (nextButton) {
+    nextButton.addEventListener('click', () => {
+      goToNextSlide();
+      stopAutoSlide();
+      startAutoSlide();
+    });
+  }
+
+  if (prevButton) {
+    prevButton.addEventListener('click', () => {
+      goToPrevSlide();
+      stopAutoSlide();
+      startAutoSlide();
+    });
+  }
+
+  // For manual scrolling (touch and mouse)
+  carouselWrapper.addEventListener('touchstart', dragStart, { passive: true }); // Passive true for better scroll performance
+  carouselWrapper.addEventListener('touchmove', dragging, { passive: true });
+  carouselWrapper.addEventListener('touchend', dragEnd);
+
+  carouselWrapper.addEventListener('mousedown', dragStart);
+  carouselWrapper.addEventListener('mousemove', dragging);
+  carouselWrapper.addEventListener('mouseup', dragEnd);
+  carouselWrapper.addEventListener('mouseleave', dragEnd); // If mouse leaves the element while dragging
+
+  // Pause/Resume on hover
+  if (carouselContainer) {
+    carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+    carouselContainer.addEventListener('mouseleave', startAutoSlide);
+  }
+
+  // --- Initialization ---
+  goToSlideNoTransition(0);
+  startAutoSlide();
+});
+
+
+
 
   </script>
 </body>

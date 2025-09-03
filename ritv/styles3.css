@@ -538,12 +538,13 @@ html {
     flex-direction: column;
     align-items: center;
   }
-  .image-div{
-    display: none;
-  }
-  .txt, .image-div {
+
+  .txt  {
     width: 100%;
     text-align: center;
+  }
+  .image-div{
+    width: 70%;
   }
   .btn-div {
     
@@ -563,8 +564,16 @@ html {
     font-size: 16px;
     padding: 10px 0;
   }
-}
+  .landing_page{
+    min-height: fit-content;
+  }
 
+}
+@media (max-width:749px){
+    .image-div{
+    display: none;
+  }
+}
 @media (max-width: 750px) {
 
   .txt h1 {
@@ -572,6 +581,9 @@ html {
   }
   .hide{
     display: block;
+  }
+  .text, .image-div{
+    width: 100%;
   }
   .txt p {
     font-size: 20px;
@@ -619,11 +631,165 @@ html {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* about */
-.carousel img{
-    width: 120%;
-    align-items: right;
-}
+ .carousel-container {
+          position: relative; 
+          width: 50%; 
+          max-width: 500px; 
+         
+          overflow: hidden; 
+          border-radius: 8px; 
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+        }
+
+        
+        .carousel-wrapper {
+          display: flex;
+          height: 100%;
+         
+        }
+
+        
+        .carousel-slide {
+  min-width: 100%; /* Each slide takes 100% of the carousel-container's width */
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically center the image within its slide */
+  /* height: 100%; /* <-- Remove or adjust if using padding-top on container */
+
+
+  top: 0;
+  left: 0;
+  width: 100%; /* Each slide is 100% of the container's width */
+height:auto ; /* Each slide is 100% of the container's height */
+
+        }
+
+        .carousel-slide img {
+          display: block; /* Removes extra space below the image */
+          
+          width: 100%; /* Image takes the full width of its slide */
+          height: 100%; /* Maintain aspect ratio */
+          object-fit: cover;
+          /* For a fixed height carousel, you might use: */
+          /* height: 400px; */
+          /* object-fit: cover; */ /* If you want the image to cover the fixed height */
+        }
+
+        /* Navigation Arrows */
+        .carousel-control {
+          position: absolute;
+          top: 50%; /* Vertically center the arrows */
+          transform: translateY(-50%); /* Fine-tune vertical centering */
+          background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+          color: white;
+          border: none;
+          padding: 10px 15px;
+          border-radius: 50%; /* Circular buttons */
+          font-size: 24px;
+          cursor: pointer;
+          z-index: 10; /* Ensure arrows are above the images */
+          transition: background-color 0.3s ease;
+          width: 50px; /* Fixed width for arrows */
+          height: 50px; /* Fixed height for arrows */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .carousel-control.prev {
+          left: 15px; /* Position on the left */
+        }
+
+        .carousel-control.next {
+          right: 15px; /* Position on the right */
+        }
+
+        .carousel-control:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Optional: Navigation Dots (if you decide to add them) */
+        .carousel-indicators {
+          position: absolute;
+          bottom: 20px; /* Position at the bottom */
+          left: 50%;
+          transform: translateX(-50%); /* Center the dots */
+          z-index: 10;
+          display: flex;
+          gap: 10px; /* Space between dots */
+        }
+
+        .dot {
+          width: 12px;
+          height: 12px;
+          background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+          border-radius: 50%;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+          background-color: white; /* Active dot is fully white */
+        }
+
+        .dot:hover {
+          background-color: rgba(255, 255, 255, 1);
+        }
+        
+        /* Your other existing CSS styles would go here */
+        .about_img img{
+            width: 70%;
+            margin-top: 10px;
+            display: block; /* Good practice for images */
+        }
+        .about_img{
+          width: 50%;
+        }
+        .about_us {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start; /* prevent children from stretching vertically */
+          height: fit-content;
+          margin-bottom: 60px;
+          gap: 30px;
+        }
+        .text {
+            width: 50%;
+          display: flex;
+          flex-direction: column;
+          gap: 0px;
+          margin-top: 30px;
+          padding-top: 0%;
+        }
+
+        /* Responsive adjustments (example) */
+       
+
 .about_img img{
     width: 70%;
     margin-top: 10px;
@@ -716,7 +882,7 @@ html {
   margin-bottom: 10px;              /* space between items */
 }
 .carousel{
-    width: 40%;
+    
     display: flex;
     flex-direction: column;
     
@@ -750,7 +916,43 @@ html {
 }
 }
 
-
+@media (max-width:1115px){
+  .carousel-container{
+    width: 100%;
+  }
+      .about {
+    flex-direction: column;
+    padding-top: 0;
+    /* center children horizontally */
+ 
+  }
+  .about_us {
+    flex-direction: column;
+    align-items: center; /* center children horizontally */
+    text-align: center; /* center text */
+    height: fit-content;
+    margin-bottom: 30px;
+    gap: 20px;
+  }
+    .carousel img{
+    width: 100%;
+    align-items: center;
+  }
+  .about h1{
+    margin-bottom: 0px;
+    font-size: 48px;
+  }
+  .about_img img{
+    width: 100%;
+    margin-top: 0px;
+  }
+    .content{
+    width: 100%; /* full width on small screens */
+    text-align: center; /* center text */
+    align-items: center; /* center items */
+  }
+  
+}
 @media (max-width: 1092px) {
   .about h3{
     font-size: 20px;
@@ -770,6 +972,7 @@ html {
   .features-list{
     font-size: 19px;
   }
+  
 }
 
 @media (max-width:1013px){
@@ -806,6 +1009,50 @@ html {
     width: 100%; /* full width on small screens */
     text-align: center; /* center text */
     align-items: center; /* center items */
+  }
+}
+ @media (max-width: 768px) {
+          .carousel-control {
+            padding: 8px 12px;
+            font-size: 18px;
+            width: 40px;
+            height: 40px;
+          }
+          .carousel-control.prev {
+            left: 10px;
+          }
+          .carousel-control.next {
+            right: 10px;
+          }
+          .carousel-indicators {
+            bottom: 15px;
+            gap: 8px;
+          }
+          .dot {
+            width: 10px;
+            height: 10px;
+          }
+          .about_us {
+            flex-direction: column; /* Stack items vertically on smaller screens */
+            align-items: center;
+          }
+          .about_img,
+          .text {
+            width: 100%; /* Full width on small screens */
+          }
+          .about_img img {
+            width: 100%; /* Adjust image width for small screens */
+          }
+        }
+
+@media (max-width:618px){
+  .carousel-slide img{
+    width: 100%;
+    overflow-x: hidden;
+  }
+    .carousel-container {
+      width: 95%; /* Slightly wider on mobile if needed */
+      /* padding-top: 75%; */ /* Adjust aspect ratio for mobile if desired */
   }
 }
 @media (max-width:450px){
@@ -933,8 +1180,15 @@ html {
 
 
 
-
-
+@media (max-width:1020px)
+{
+  .main_bg{
+    min-height: fit-content;
+  }
+  .event-format{
+    padding-bottom: 40px;
+  }
+}
 
 
 
@@ -1018,10 +1272,11 @@ html {
 
 .apply-cards {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   gap: 40px;
   margin-top: 40px;
-  flex-wrap: wrap; /* responsive stacking */
+ 
 }
 
 .apply-card {
@@ -1080,29 +1335,50 @@ html {
 }
 
 
-@media(max-width: 900px) {
-  
-}
+
 @media (max-width: 1115px) {
-  
+  .apply3 {
+    margin-top: 35px;
+}
+.apply2{
+  margin-top: 30px;
+}
   .icon img{
     width: 40%;
   }
-  .icon2 img, .icon3 img{
+ .icon3 img{
     width: 50%;
     margin-top: 20px;
   }
+  .icon2 img{
+    width: 50%;
+   
+  }
   .apply-card {
-    border-right: none; /* remove dividers on mobile */
+     /* remove dividers on mobile */
     max-width: 100%;
     padding: 0 0px;
-    gap: 0px;
+  
   }
 
 }
-
-
+@media (max-width:951px){
+  .apply-cards{
+    gap: 0px;
+  }
+}
+@media (max-width:741px){
+  .apply-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .apply-card{
+    border-right: none;
+  }
+}
 @media (max-width: 500px){
+
   .who-can-apply{
     padding-bottom: 50px;
   }
@@ -1114,7 +1390,7 @@ html {
   }
   .icon2 img, .icon3 img{
     width: 50%;
-    margin-top: 20px;
+   
   }
   .apply-card {
     border-right: none; /* remove dividers on mobile */
