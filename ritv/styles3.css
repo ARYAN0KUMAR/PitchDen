@@ -1051,7 +1051,7 @@ height:auto ; /* Each slide is 100% of the container's height */
     overflow-x: hidden;
   }
     .carousel-container {
-      width: 95%; /* Slightly wider on mobile if needed */
+      width: 105%; /* Slightly wider on mobile if needed */
       /* padding-top: 75%; */ /* Adjust aspect ratio for mobile if desired */
   }
 }
