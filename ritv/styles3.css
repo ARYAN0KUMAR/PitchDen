@@ -1066,6 +1066,15 @@ height:auto ; /* Each slide is 100% of the container's height */
 @media (max-width:450px){
   .about{
     padding-top: 40px;
+ 
+  }
+  .carousel-container
+  {
+    width: 109%;
+    margin-bottom: 60px;
+  }
+  .about_us{
+    gap: 0px;
   }
 }
 @media (max-width:500px){
