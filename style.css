@@ -1,21 +1,93 @@
 .landing-page {
+    /* background-image: url('./imgs/Section.png');
+    background-size: cover;
+    background-position: center; */
     background-image: url('./imgs/Section.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+/* Ensure the slide can anchor absolutely positioned children */
+.carousel-item.position-relative { position: relative; }
+
+/* “Know More” pill styled & pinned like in the reference */
+.know{
+  position: absolute;
+  right: clamp(16px, 3vw, 32px);
+  bottom: clamp(16px, 3vw, 18px);
+  z-index: 5;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 42px;
+
+  font-weight: 800;
+  letter-spacing: .4px;
+  text-decoration: none;
+  color: #1f3d18;
+
+  border-radius: 999px;
+  background: linear-gradient(180deg, #d6ff8a 0%, #a8f16a 100%);
+  box-shadow:
+    0 10px 22px rgba(38,148,56,.25),
+    inset 0 -3px 6px rgba(0,0,0,.12),
+    inset 0 2px 6px rgba(255,255,255,.35);
+  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+  border: 0;
+}
+
+.know:hover { transform: translateY(-2px); filter: brightness(1.04); }
+.know:active { transform: translateY(0); box-shadow:
+  0 6px 14px rgba(38,148,56,.22),
+  inset 0 -1px 3px rgba(0,0,0,.18),
+  inset 0 1px 4px rgba(255,255,255,.30); }
+.know:focus  { outline: 2px solid #265f2a; outline-offset: 3px; }
+
+/* Mobile: keep it visible and centered if space is tight */
+@media (max-width: 576px){
+  .know{
+    left: 50%;
+    right: auto;
+    bottom: 12px;
+    transform: translateX(-50%);
+    padding: 11px 22px;
+  }
+}
+
+.slideshow {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+.slideshow img {
+    position: absolute;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slideshow img.active {
+    opacity: 1;
 }
 .but{
     margin-top:40px;
 }
 nav {
     width: 100%;
-    padding: 15px 6%;
+    padding: 10px 6% 0px 6%;
     display: flex;
+    height: 80px;
     justify-content: space-between;
     align-items: center;
-
+    
 
     top: 0;
     left: 0;
@@ -34,6 +106,8 @@ nav {
     gap: 40px;
     list-style: none;
     align-items: center;
+    justify-content: center;
+    padding-top: 20px;
 }
 
 .nav-links li {
@@ -149,7 +223,7 @@ nav {
 .txt{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
     text-align: left;
     align-items: left;
     width: 50%;
@@ -167,6 +241,12 @@ nav {
 .not-txt{
     width: 50%;
     margin-right: 20px;
+    border-radius: 30px;
+}
+.not-txt img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
 }
 
 
@@ -969,3 +1049,5 @@ hr {
 .hide{
     display: none;
 }
+
+/* On phones: absolutely no transition/transform */

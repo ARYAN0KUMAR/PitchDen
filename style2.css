@@ -1,5 +1,13 @@
+@media (max-width:1280px)
+{
+    nav{
+        height: 90px;
+    }
+
+}
 
 @media (max-width:1115px){
+
     /* .wrapper .carousel{
         grid-auto-columns: calc(100% /2)-12px;
         gap: 16px;
@@ -16,6 +24,9 @@
 
     
     } */
+    .landing-page{
+        
+    }
     .text{
         font-size: 42px;
     }
@@ -189,9 +200,55 @@
         margin: 0;
     }
 }
+/* On phones: no transition animation at all */
+/* On phones: absolutely no transition/transform */
+
+/* <=900px: freeze the carousel and show only the first slide */
+@media (max-width: 900px){
+  /* kill motion */
+  #heroCarousel .carousel-item{
+    transition: none !important;
+  }
+  #heroCarousel .carousel-item-start,
+  #heroCarousel .carousel-item-end,
+  #heroCarousel .carousel-item-next,
+  #heroCarousel .carousel-item-prev{
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* show only the FIRST slide, hide the rest */
+  #heroCarousel .carousel-inner > .carousel-item{ 
+    display: none !important;
+    opacity: 0 !important;
+  }
+  #heroCarousel .carousel-inner > .carousel-item:first-child{
+    display: block !important;
+    opacity: 1 !important;
+    position: relative;     /* keep stacking sane */
+    transform: none !important;
+  }
+
+  /* hide any indicators/controls if you add them later */
+  #heroCarousel .carousel-indicators,
+  #heroCarousel .carousel-control-prev,
+  #heroCarousel .carousel-control-next{
+    display: none !important;
+  }
+}
+
 @media (max-width:932px){
+    .chide{
+        display: none  ;
+    }
+    .landing-page{
+        height: 50%;
+        padding-bottom: 150px;
+        margin-bottom: 30px;
+    }
     .text{
         font-size: 30px;
+        margin-top: 0px;
         
     }
     .custom-btn{
