@@ -43,37 +43,49 @@
         
 
         <!-- Hero Carousel -->
+<!-- Hero Carousel -->
 <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-wrap="true">
   <div class="carousel-inner">
 
-    <!-- Slide 1: Image Hero -->
-    <div class="carousel-item active">
-     
-      
-              
-        <div class=col>
-            <div class=text>
-                Welcome to Pitch Den,<br> where Innovation meets Opportunity!<br>
-                <a href="#founders"><button class="custom-btn but">Get Started</button>
-                </a>
-            </div>
-            <div class=image>
-                <img src="imgs\Illustration.png"/>
-            </div>
-         
+    <!-- Slide 1 -->
+    <div class="carousel-item active" data-bs-interval="1000">
+      <div class="col">
+        <div class="text">
+          Welcome to Pitch Den,<br> where Innovation meets Opportunity!<br>
+          <a href="#founders"><button class="custom-btn but">Get Started</button></a>
+        </div>
+        <div class="image">
+          <!-- fix the slash -->
+          <img src="imgs/Illustration.png" />
+        </div>
       </div>
     </div>
 
-    <!-- Slide 2: Image Hero -->
-<!-- Slide 2: Banner -->
-<div class="carousel-item position-relative ">
-  <img src="imgs/7.png" class="d-block w-100 hero-img" alt="Hero 2">
+    <!-- Slide 2 -->
+    <div class="carousel-item position-relative" data-bs-interval="5000">
+      <img src="imgs/7.png" class="d-block w-100 hero-img" alt="Hero 2">
+      <a href="ritv/" class="know" aria-label="Know more">KNOW MORE</a>
+    </div>
+  </div>
 
-  <!-- Know More button -->
-  <a href="#event" class="know" aria-label="Know more">
-    KNOW MORE
-  </a>
+  <!-- Dots (indicators) -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  </div>
+
+  <!-- Arrows (controls) -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
+
 
 
     <!-- Slide 3: Your Text + Illustration -->

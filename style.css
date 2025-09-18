@@ -13,20 +13,95 @@
     width: 100%;
     overflow: hidden;
 }
+
+#heroCarousel .carousel-indicators {
+  bottom: 14px;
+  margin: 0;
+  gap: 10px;
+}
+#heroCarousel .carousel-indicators [data-bs-target]{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background-color: rgba(255,255,255,.7);
+  opacity: 1;
+  border: 0;
+}
+#heroCarousel .carousel-indicators .active{
+  background-color: #ffffff;
+}
+
+/* Arrows: move to bottom-right cluster */
+#heroCarousel .carousel-control-prev,
+#heroCarousel .carousel-control-next{
+  top: 50%;                          /* center vertically */
+  transform: translateY(-50%);       /* shift up by half height */
+  bottom: auto; 
+  width: 40px;
+  height: 40px;
+  opacity: 1;                 /* visible */
+  transition: opacity .2s ease;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.90));
+
+  background-color: rgba(255, 255, 255, 0.15);/* transparent white */
+  border-radius: 50%;             /* circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+#heroCarousel .carousel-control-prev:hover,
+#heroCarousel .carousel-control-next:hover {
+  background-color: rgba(255, 255, 255, 0.35); /* stronger on hover */
+}
+#heroCarousel .carousel-control-prev { left: auto; right: 64px; }
+#heroCarousel .carousel-control-next { right: 16px; }
+#heroCarousel .carousel-control-prev-icon,
+#heroCarousel .carousel-control-next-icon{
+  width: 1.5rem;   /* smaller icon */
+  height: 1.5rem;  /* smaller icon */
+  filter: invert(1);
+}
+
+/* Hover affordance (desktop) */
+#heroCarousel .carousel-control-prev {
+  right: auto;   /* shift left arrow slightly left */
+  left: 16px;    /* override default */
+}
+
+#heroCarousel .carousel-control-next {
+  right: 16px;
+}
+@media (hover: hover){
+  #heroCarousel .carousel-control-prev:hover,
+  #heroCarousel .carousel-control-next:hover{
+    opacity: .9;
+  }
+}
+
+/* <=900px you already freeze the carousel.
+   Hide dots/arrows there so the hero is clean. */
+@media (max-width: 900px){
+  #heroCarousel .carousel-indicators,
+  #heroCarousel .carousel-control-prev,
+  #heroCarousel .carousel-control-next{
+    display: none !important;
+  }
+}
 /* Ensure the slide can anchor absolutely positioned children */
 .carousel-item.position-relative { position: relative; }
 
 /* “Know More” pill styled & pinned like in the reference */
 .know{
   position: absolute;
-  right: clamp(16px, 3vw, 32px);
+  right: clamp(16px, 3vw, 26px);
   bottom: clamp(16px, 3vw, 18px);
   z-index: 5;
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 42px;
+  padding: 15px 44px;
 
   font-weight: 800;
   letter-spacing: .4px;
@@ -183,6 +258,7 @@ nav {
     flex-direction: row;
     width: 100%;
     margin-top: 25px;
+    padding-bottom: 35px;
 
 }
 .text{
