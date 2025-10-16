@@ -1981,3 +1981,59 @@ background: linear-gradient(90deg, #5de0e6, #004aad, #004aad);
         padding: 10px 0px;
     }
 }
+
+/* Ongoing Events Section */
+.ongoing-events {
+  background: linear-gradient(180deg, #e8f8f9 0%, #ffffff 100%);
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+}
+
+.events-title {
+  font-family: "League Spartan", sans-serif;
+  color: #139da0;
+  font-size: 58px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.events-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 5px;
+  background-color: #139da0;
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+.events-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #139da0;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust for plugin iframe responsiveness */
+.events-wrapper iframe,
+.events-wrapper div[data-type="org"] {
+  width: 100% !important;
+  min-height: 550px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .events-title {
+    font-size: 38px;
+  }
+  .events-wrapper {
+    padding: 10px;
+    border-radius: 15px;
+  }
+}
